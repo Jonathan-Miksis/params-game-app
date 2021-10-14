@@ -1,1 +1,1 @@
-GET http://localhost:3000/game?name=jon
+GET http://localhost:3000/game?name=jill
