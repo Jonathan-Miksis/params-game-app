@@ -2,3 +2,6 @@
 
 ###
 GET http://localhost:3000/guess_a_number?number=9
+
+###
+GET http://localhost:3000/numbers/4/8
