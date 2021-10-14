@@ -8,13 +8,14 @@ class GamesController < ApplicationController
   #     render json: {message: "Your name doesn't start with A!"}
 
   def number_guess
-    correct_number = params["number"].to_i
-    if correct_number > 36
-      render json: {message: "Your guess is too high!"}
-    elsif correct_number < 36
-      render json: {message: "Your guess is too low!"}
-    elsif correct_number == 36
-      render json: {message: "You got the correct number!"}
+    user_number = params["number"].to_i
+    if user_number > 36
+      message = "Your guess is too high!"
+    elsif user_number < 36
+      message = "Your guess is too low!"
+    elsif user_number == 36
+      message = "You got the correct number!"
     end
+    render json: {message: message}
   end
 end
